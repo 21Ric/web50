@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Advanced Search</title>
+        <style>
+            header {
+                padding: 20px 100px 0 100px;
+            }
+
+            .header h2 {
+                font-size: 20px;
+                margin: 0px;
+            }
+
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+                text-align: left;
+            }
+
+            .top-links {
+                text-align: right;
+                padding: 20px 100px 0 100px;
+                position: relative;
+                top: -20px;
+            }
+
+            .top-links a {
+                color: blue;
+                text-decoration: none;
+                font-weight: bold;
+            }
+
+            .container {
+                padding: 50px 100px;
+                flex-direction: column;
+            }
+
+            .search-group {
+                display: flex;
+                align-items: center;
+                margin-bottom: 20px;
+            }
+
+            label {
+                width: 200px;
+                margin-bottom: 5px;
+                font-size: 14px;
+            }
+
+            input[type="text"] {
+                width: 400px;
+                height: 30px;
+                border: 1px solid #ccc;
+                padding: 5px 10px;
+            }
+
+            .search-button {
+                background-color: #4285f4;
+                color: white;
+                border-radius: 15px;
+                padding: 10px 20px;
+                font-size: 14px;
+                cursor: pointer;
+            }
+
+            .search-button:hover {
+                background-color: #357ae8;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="top-links">
+            <a href="index.html">Google Search</a>
+        </div>
+
+        <div class="container">
+            <h2>Find pages with...</h2>
+            <form action="https://www.google.com/search">
+                <div class="search-group">
+                    <label>All these words:</label>
+                    <input type="text" name="as_q">
+                </div>
+                <div class="search-group">
+                    <label>This exact word or phrase:</label>
+                    <input type="text" name="as_epq">
+                </div>
+                <div class="search-group">
+                    <label>Any of these words:</label>
+                    <input type="text" name="as_oq">
+                </div>
+                <div class="search-group">
+                    <label>None of these words:</label>
+                    <input type="text" name="as_eq">
+                </div>
+                <input type="submit" value="Advanced Search" class="search-button">
+            </form>
+        </div>
+    </body>
+</html>

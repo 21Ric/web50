@@ -1,168 +1,56 @@
-<!-- index.html -->
 <!DOCTYPE html>
-<html>
-<head>
-    <title>Google Search</title>
+<html lang="en">
+    <head>
+        <title>Search</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            margin: 100px 20px;
-            text-align: left;
+            background-color: white;
+            color: black;
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0px;
+            padding: 0px;
+        }
+        .top-links {
+            text-align: right;
+            padding: 20px;
+            color: blue;
+        }
+
+        .search-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            margin-top: 200px;
         }
         input[type="text"] {
-            width: 400px;
-            padding: 10px;
-            border-radius: 24px;
-            border: 1px solid #dcdcdc;
+                width: 400px;
+                height: 30px;
+                border-radius: 20px;
+                padding: 5px;
         }
-        .button {
+
+        .form-flex {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             margin-top: 20px;
         }
-        input[type="submit"] {
-            padding: 8px 16px;
-            margin: 4px;
-            border: none;
-            background-color: #f8f9fa;
-            border: 1px solid #f8f9fa;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-        .top-links {
-            position: absolute;
-            top: 10px;
-            right: 20px;
-        }
-        .top-links a {
-            margin-left: 15px;
-            text-decoration: none;
-            color: #1a0dab;
-        }
     </style>
-</head>
-<body>
-    <div class="top-links">
-        <a href="images.html">Image Search</a>
-        <a href="advanced.html">Advanced Search</a>
+    </head>
+    <body>
+        <div class="top-links">
+            <a href="images.html">Image Search</a>
+            <a href="advanced.html">Advanced Search</a>
+        </div>
+        <div class="search-form">
+            <form action="https://www.google.com/search" class="form-flex">
+    <input type="text" name="q">
+    <br><br>  
+    <div class="button-group">
+        <input type="submit" value="Google Search">
+        <input type="submit" value="I'm Feeling Lucky" name="btnI">
     </div>
-    <form action="https://www.google.com/search">
-        <input type="text" name="q">
-        <div class="button">
-            <input type="submit" value="Google Search">
-            <input type="submit" value="I'm Feeling Lucky" name="btnI">
-        </div>
     </form>
-</body>
-</html>
-
-<!-- images.html -->
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Google Image Search</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 100px 20px;
-            text-align: left;
-        }
-        input[type="text"] {
-            width: 400px;
-            padding: 10px;
-            border-radius: 24px;
-            border: 1px solid #dcdcdc;
-        }
-        .top-links {
-            position: absolute;
-            top: 10px;
-            right: 20px;
-        }
-        .top-links a {
-            margin-left: 15px;
-            text-decoration: none;
-            color: #1a0dab;
-        }
-    </style>
-</head>
-<body>
-    <div class="top-links">
-        <a href="index.html">Google Search</a>
-    </div>
-    <form action="https://www.google.com/search">
-        <input type="text" name="q">
-        <input type="hidden" name="tbm" value="isch">
-        <div class="button">
-            <input type="submit" value="Image Search">
-        </div>
-    </form>
-</body>
-</html>
-
-<!-- advanced.html -->
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Google Advanced Search</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 50px 20px;
-            text-align: left;
-        }
-        .top-links {
-            position: absolute;
-            top: 10px;
-            right: 20px;
-        }
-        .top-links a {
-            margin-left: 15px;
-            text-decoration: none;
-            color: #1a0dab;
-        }
-        .field {
-            margin-bottom: 15px;
-        }
-        label {
-            display: block;
-            font-size: 14px;
-        }
-        input[type="text"] {
-            width: 300px;
-            padding: 6px;
-        }
-        .submit-button input {
-            background-color: #4d90fe;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-    </style>
-</head>
-<body>
-    <div class="top-links">
-        <a href="index.html">Google Search</a>
-    </div>
-    <form action="https://www.google.com/search">
-        <div class="field">
-            <label>Find pages with... “all these words:”</label>
-            <input type="text" name="as_q">
-        </div>
-        <div class="field">
-            <label>Find pages with... “this exact word or phrase:”</label>
-            <input type="text" name="as_epq">
-        </div>
-        <div class="field">
-            <label>Find pages with... “any of these words:”</label>
-            <input type="text" name="as_oq">
-        </div>
-        <div class="field">
-            <label>Find pages with... “none of these words:”</label>
-            <input type="text" name="as_eq">
-        </div>
-        <div class="submit-button">
-            <input type="submit" value="Advanced Search">
-        </div>
-    </form>
-</body>
+    </body>
 </html>
